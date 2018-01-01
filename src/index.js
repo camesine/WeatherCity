@@ -8,6 +8,8 @@ import ReduxPromise from 'redux-promise'
 import reducers from './reducers'
 import App from './components/App'
 
+import './style.css'
+
 ReactDOM.render(
   <Provider store={applyMiddleware(ReduxPromise)(createStore)(reducers)} >
     <App />

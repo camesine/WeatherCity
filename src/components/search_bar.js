@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { fetchWeather } from '../../actions'
+import { fetchWeather } from '../actions'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import './style.css'
 
 class SearchBar extends Component {
 
@@ -31,7 +30,7 @@ class SearchBar extends Component {
     return (
       <form onSubmit={this.onFormSubmit} >
         <div className="input-group">
-          <input onChange={this.onInputChange} type="text" className="form-control" placeholder="Search for city, place or country" />
+          <input onChange={this.onInputChange} value={this.state.term} type="text" className="form-control" placeholder="Search for city, place or country" />
             <span className="input-group-btn">
               <button type="submit" className="btn btn-primary"><span className="glyphicon glyphicon-search"></span></button>
             </span>
