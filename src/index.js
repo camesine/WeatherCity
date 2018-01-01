@@ -1,6 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './components/App';
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { Provider } from 'react-redux'
+import { createStore, applyMiddleware } from 'redux'
+import ReduxPromise from 'redux-promise'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import reducers from './reducers'
+import App from './components/App'
+
+ReactDOM.render(
+  <Provider store={applyMiddleware(ReduxPromise)(createStore)(reducers)} >
+    <App />
+  </Provider>,
+document.getElementById('root'));

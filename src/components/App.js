@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SearchBar from './search_bar/index'
+import SearchBar from './search_bar'
 
 class App extends Component {
   render() {
@@ -7,11 +7,10 @@ class App extends Component {
       <div>
 
         <div className="row">
-          <div className="col-lg-12">
+          <div className="col-lg-4 col-md-4 col-sm-4 col-xs-10 centered">
             <SearchBar />
           </div>
         </div>
-
       </div>
     );
   }
