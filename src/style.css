@@ -5,3 +5,21 @@
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
+td, th {
+  vertical-align: middle !important;
+  text-align: center !important;
+}
+
+.alert {
+  margin-top: 10px !important;
+}
+
+svg {
+  height: 150px;
+}
+
+td:first-of-type, td:first-of-type > div {
+  height: 150px;
+  width: 210px;
+}
