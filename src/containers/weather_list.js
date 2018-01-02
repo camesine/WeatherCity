@@ -3,8 +3,8 @@ import WeatherDetail from '../components/weather_detail'
 import { connect } from 'react-redux'
 
 class WeatherList extends Component {
-
-  render(props) {
+  
+  render() {
     return (
       <table className="table table-hover">
         <thead>
@@ -16,9 +16,7 @@ class WeatherList extends Component {
           </tr>
         </thead>
         <tbody>
-          { this.props.weather.map(weather => {
-            return <WeatherDetail key={weather.city.id} weather={weather} />
-          })}
+          {this.props.weather.data.map(weather => <WeatherDetail key={weather.city.id} weather={weather} /> )}
         </tbody>
       </table>  
     )

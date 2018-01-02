@@ -1,9 +1,12 @@
 import React from 'react'
 import Chart from './chart'
+import GoogleMap from "../components/google_map"
+
 export default ({ weather }) => {
+  const { lon, lat } = weather.city.coord;
   return (
     <tr >
-      <td>{weather.city.name}</td>
+      <td><GoogleMap lon={lon} lat={lat} /></td>
       <td>
         <Chart color={"orange"} units={'K'} data={weather.list.map(weather => weather.main.temp)} />
       </td>
